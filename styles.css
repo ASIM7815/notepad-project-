@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+}
+
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.toolbar {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn-danger {
+    background: rgba(239, 68, 68, 0.3);
+    border-color: rgba(239, 68, 68, 0.5);
+}
+
+.btn-danger:hover {
+    background: rgba(239, 68, 68, 0.5);
+}
+
+.editor-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.info-bar {
+    background: #f3f4f6;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: #6b7280;
+    border-bottom: 1px solid #e5e7eb;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+#saveStatus {
+    color: #10b981;
+    font-weight: 600;
+}
+
+#notepad {
+    flex: 1;
+    border: none;
+    padding: 20px;
+    font-size: 16px;
+    font-family: 'Courier New', monospace;
+    line-height: 1.6;
+    resize: none;
+    outline: none;
+    background: white;
+}
+
+#notepad::placeholder {
+    color: #9ca3af;
+}
+
+/* Scrollbar styling */
+#notepad::-webkit-scrollbar {
+    width: 10px;
+}
+
+#notepad::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+#notepad::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+#notepad::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        height: 95vh;
+    }
+    
+    header h1 {
+        font-size: 22px;
+    }
+    
+    .btn {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+    
+    .info-bar {
+        font-size: 11px;
+        gap: 10px;
+    }
+    
+    #notepad {
+        font-size: 14px;
+        padding: 15px;
+    }
+}
